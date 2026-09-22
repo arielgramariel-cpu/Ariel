@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Messenger</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+    <div class="logo">Photo Messenger</div>
+<div id="userArea">
+    <button id="loginButton">Login</button>
+    <button id="registerButton">Register</button>
+</div>
+</header>
+<main>
+<!-- Auth -->
+<section id="authSection" class="auth hidden">
+    <div class="authBox">
+        <h2 id="authTitle">Login</h2>
+        <input
+            id="username"
+            type="text"
+            placeholder="Username or email"
+        >
+        <input
+            id="email"
+            type="email"
+            placeholder="Email"
+            class="hidden"
+        >
+        <input
+            id="password"
+            type="password"
+            placeholder="Password"
+        >
+        <button id="authSubmit">Login</button>
+        <p id="authMessage"></p>
+    </div>
+</section>
+<!-- Create post -->
+<section id="createPost" class="create-post hidden">
+    <h2>New photo</h2>
+    <input
+        id="photoInput"
+        type="file"
+        accept="image/*"
+    >
+    <textarea
+        id="caption"
+        placeholder="Write something..."
+    ></textarea>
+    <button id="publishButton">
+        Publish
+    </button>
+    <p id="postMessage"></p>
+</section>
+<!-- Feed -->
+<section id="feed">
+    <div class="feedHeader">
+        <h2>Photos</h2>
+        <button id="refreshButton">
+            Refresh
+        </button>
+    </div>
+    <div id="posts"></div>
+</section>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
